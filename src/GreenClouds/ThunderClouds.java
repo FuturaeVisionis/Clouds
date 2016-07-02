@@ -3,6 +3,8 @@ package GreenClouds;
 import java.util.Scanner;
 
 import BlueClouds.RainClouds;
+import YellowClouds.StormClouds;
+import GoldenClouds.Rainbow;
 
 public class ThunderClouds {
 
@@ -23,6 +25,7 @@ public class ThunderClouds {
 		}
 	}
 
+	@SuppressWarnings("static-access")
 	public static void main(String[] args) {
 
 		RainClouds tc = new RainClouds();
@@ -30,6 +33,15 @@ public class ThunderClouds {
 
 		RainClouds.DustyClouds tc1 = tc.new DustyClouds();
 		tc1.tornado();
+
+		RainClouds.DustyClouds.WindBlast tc2 = tc1.new WindBlast();
+		tc2.icyrain();
+
+		StormClouds tc3 = new StormClouds();
+		tc3.Altitude();
+		
+		Rainbow tc4 = new Rainbow();
+		tc4.summer();
 
 	}
 }
